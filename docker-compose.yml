@@ -1,0 +1,15 @@
+version: '2.1'
+
+services:
+  vscode:
+    container_name: vscode
+    image: pureumirnarae/vscode:1.0
+    network_mode: "host"
+    restart: always
+    privileged: true
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix:ro"
+      - "/home/study/share:/home/developer/share"
+    environment:
+      - DISPLAY
+
